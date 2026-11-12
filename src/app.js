@@ -5,8 +5,10 @@ import { filmsRouter } from "./routes/filmsRouter.js"
 import { connectMongoDB } from "./config/connectMongoDB.js"
 import { usersRouter } from "./routes/usersRouter.js"
 import { authMiddleware } from "./middleware/authMiddleware.js"
+import dotenv from "dotenv"
 
-process.loadEnvFile()
+
+dotenv.config()
 
 const PORT = process.env.PORT
 const URI_DB = process.env.URI_DB

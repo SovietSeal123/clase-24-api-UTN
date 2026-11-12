@@ -4,7 +4,9 @@ import {successResponse, errorResponse} from "../utils/index.js"
 import mongoose from "mongoose"
 import jwt from "jsonwebtoken"
 import { filmSchema } from "../validators/filmValidator.js"
-process.loadEnvFile()
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const filterFilms = async (req, res) => {
     try {
