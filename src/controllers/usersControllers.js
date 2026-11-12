@@ -3,6 +3,9 @@ import {HTTP_MESSAGE} from "../constants/index.js"
 import {successResponse, errorResponse} from "../utils/index.js"
 import bcryptjs from "bcryptjs"
 import jwt from "jsonwebtoken"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const getUsers = async (req, res) => {
     const users = await User.find()
